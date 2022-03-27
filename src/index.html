@@ -1,3 +1,54 @@
+<html lang="en-US">
 <head>
-  <title>Template Repo</title>
+  <title>Currency Exchange</title>
 </head>
+<body>
+  <div class="container">
+    <h1>Get exchange rates from some of the most popular currencies in the world</h1>
+    <label for="location">Enter an amount:</label>
+    <input id="location" type="text">
+    <label for="currency">Choose a currency</label>
+    <select name="money" id="currencyCode">
+      <option value="AED">AED</option>
+      <option value="AFN">AFD</option>
+      <option value="ALL">ALL</option>
+      <option value="AMD">AMD</option>
+      <option value="ANG">ANG</option>
+      <option value="AOA">AOA</option>
+      <option value="ARS">ARS</option>
+      <option value="AUD">AUD</option>
+      <option value="AWG">AWD</option>
+      <option value="AZN">AZN</option>
+      <option value="BAM">BAM</option>
+      <option value="BBD">BBD</option>
+      <option value="BDT">BDT</option>
+      <option value="BGN">BGN</option>
+      <option value="BHD">BHD</option>
+      <option value="BIF">BIF</option>
+      <option value="BMD">BMD</option>
+      <option value="BND">BND</option>
+      <option value="BOB">BOB</option>
+      <option value="BRL">BRL</option>
+      <option value="BSD">BSD</option>
+      <option value="BTN">BTN</option>
+      <option value="BWP">BWP</option>
+      <option value="BYN">BYN</option>
+      <option value="BZD">BZD</option>
+      <option value="CAD">CAD</option>
+      <option value="CDF">CDF</option>
+      <option value="CHF">CHF</option>
+      <option value="CLP">CLP</option>
+      <option value="CNY">CNY</option>
+      <option value="COP">COP</option>
+      <option value="CUP">CUP</option>
+      <option value="CVE">CVE</option>
+      <option value="CZK">CZK</option>
+      <option value="JPY">JPY</option>
+    </select>
+    <button class="btn-success" id="makeExchange">Exchange</button>
+
+    <div class="exchange-result"></div>
+    <div class="show-errors"></div>
+  </div>
+</body>
+</html>
