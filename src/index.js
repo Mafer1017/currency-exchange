@@ -10,7 +10,7 @@ function clearFields() {
   $('.show-errors').text("");
 }
 
-function getElements (response, input) {
+function getElements (response, input, location) {
   if (response) {
     const conversion = (response.conversion_rate * input).toFixed(2);
     $('#exchange-result').append(`USD is worth ${conversion} ${location}.<br>`);
@@ -19,17 +19,17 @@ function getElements (response, input) {
   }
 }
 
-async function makeApiCall(differentCurrency, input, currency) {
-  const response = await CurrencyExchange.exchangeCurrency(differentCurrency);
+async function makeApiCall(location, input, currency) {
+  const response = await CurrencyExchange.exchangeCurrency(location, input, currency);
   getElements(response, input, currency);
 }
 
 $(document).ready(function() {
   $('#makeExchange').click(function() {
-    event.preventDefault();
     let location = $('#location').val();
+    let currencyCode = $('#currencyCode').val;
     clearFields();
-    makeApiCall(location);
+    makeApiCall(location, currencyCode);
     $('#exchange-result').show();
     $('#show-errors').show();
   });
